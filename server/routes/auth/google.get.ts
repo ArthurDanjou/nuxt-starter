@@ -1,16 +1,16 @@
 export default oauth.googleEventHandler({
   config: {
     authorizationParams: {
-      access_type: 'offline'
-    }
+      access_type: 'offline',
+    },
   },
   async onSuccess(event, { user }) {
     await setUserSession(event, {
       user: {
         name: user.name,
         imageUrl: user.picture,
-        email: user.email
-      }
+        email: user.email,
+      },
     })
 
     return sendRedirect(event, '/')
@@ -19,5 +19,5 @@ export default oauth.googleEventHandler({
   onError(event, error) {
     console.error('Google OAuth error:', error)
     return sendRedirect(event, '/')
-  }
+  },
 })

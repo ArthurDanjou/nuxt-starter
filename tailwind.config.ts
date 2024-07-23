@@ -14,12 +14,12 @@ export default <Partial<Config>>{
     './Error.{js,ts,vue}',
     './error.{js,ts,vue}',
     './app.config.{js,ts}',
-    'content/**/*.md'
+    'content/**/*.md',
   ],
   theme: {
     extend: {
 
-    }
+    },
   },
-  plugins: [typography]
+  plugins: [typography],
 }

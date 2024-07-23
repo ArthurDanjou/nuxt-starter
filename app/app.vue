@@ -1,3 +1,15 @@
+<script lang="ts" setup>
+useHead({
+  link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }],
+})
+
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true,
+})
+</script>
+
 <template>
   <Html
     :dir="head.htmlAttrs.dir"
@@ -36,18 +48,6 @@
     </Body>
   </Html>
 </template>
-
-<script lang="ts" setup>
-useHead({
-  link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }]
-})
-
-const head = useLocaleHead({
-  addDirAttribute: true,
-  identifierAttribute: 'id',
-  addSeoAttributes: true
-})
-</script>
 
 <style>
 body {
